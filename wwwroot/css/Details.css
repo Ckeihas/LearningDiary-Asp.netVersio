@@ -1,0 +1,48 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.allTopics {
+    text-align: center;
+    margin-top: 7.5em;
+}
+
+    .allTopics p {
+        margin-top: 15px;
+        margin-bottom: 5em;
+    }
+
+    .allTopics h1 {
+        font-size: 80px;
+    }
+
+.table {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    margin-top: 20em;
+}
+
+.table dt {
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.table td {
+    line-height: 40px;
+}
+
+.valikko{
+    margin-top: 10px;
+}
+
+.btn{
+    width: 50px;
+}
+

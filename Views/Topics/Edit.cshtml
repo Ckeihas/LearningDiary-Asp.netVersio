@@ -1,0 +1,86 @@
+﻿@model TheRealLearningDiary.Models.Topic
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!DOCTYPE html>
+<head>
+    <title>Search Topic</title>
+    <link href="~/css/getStarted.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="inputForm">
+        <div class="header">
+            <h1>Edit</h1>
+            <h4>Topic</h4>
+            <hr />
+        </div>
+
+        <div class="inputId">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly"></div>
+                <input type="hidden" asp-for="Id" />
+                <div>
+                    <label asp-for="Title"></label>
+                </div>
+                <input asp-for="Title" />
+                <span asp-validation-for="Title"></span>
+
+                <div>
+                    <label asp-for="Description"></label>
+                </div>
+                <input asp-for="Description" />
+                <span asp-validation-for="Description"></span>
+
+                <div>
+                    <label asp-for="TimeToMaster"></label>
+                </div>
+                <input asp-for="TimeToMaster" />
+                <span asp-validation-for="TimeToMaster"></span>
+
+                <div>
+                    <label asp-for="TimeSpend"></label>
+                </div>
+                <input asp-for="TimeSpend" />
+                <span asp-validation-for="TimeSpend"></span>
+
+                <div>
+                    <label asp-for="Source"></label>
+                </div>
+                <input asp-for="Source" />
+                <span asp-validation-for="Source"></span>
+
+                <div>
+                    <label asp-for="StartLearningDate"></label>
+                </div>
+                <input asp-for="StartLearningDate" />
+                <span asp-validation-for="StartLearningDate"></span>
+
+                <div>
+                    <label asp-for="CompletionDate"></label>
+                </div>
+                <input asp-for="CompletionDate" />
+                <span asp-validation-for="CompletionDate"></span>
+
+                <div>
+                    <label asp-for="InProgress"></label>
+                </div>
+                <input asp-for="InProgress" />
+                <span asp-validation-for="InProgress"></span>
+
+                <input type="submit" value="Save" class="submit" />
+            </form>
+        </div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
+    </div>
+    <div class="back">
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</body>
+

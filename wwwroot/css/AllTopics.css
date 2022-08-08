@@ -1,0 +1,35 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.allTopics{
+    text-align: center;
+    margin-top: 7.5em;
+}
+
+.allTopics p{
+    margin-top: 15px;
+}
+
+.allTopics h1{
+    font-size: 80px;
+}
+
+.table {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.table th {
+    line-height: 40px;
+}
+
+.table td{
+    line-height: 40px;
+}

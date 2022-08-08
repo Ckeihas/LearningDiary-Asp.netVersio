@@ -1,0 +1,90 @@
+﻿@model IEnumerable<TheRealLearningDiary.Models.Topic>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<head>
+    <title>Get Started</title>
+    <link href="~/css/AllTopics.css" rel="stylesheet">
+</head>
+<body>
+    <div class="allTopics">
+        <h1>All topics</h1>
+
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimeToMaster)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimeSpend)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Source)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StartLearningDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompletionDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InProgress)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TimeToMaster)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TimeSpend)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Source)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartLearningDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompletionDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InProgress)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+
+

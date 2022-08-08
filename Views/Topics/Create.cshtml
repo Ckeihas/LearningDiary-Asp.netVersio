@@ -1,0 +1,90 @@
+﻿@model TheRealLearningDiary.Models.Topic
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+<head>
+    <title>Get Started</title>
+    <link href="~/css/getStarted.css" rel="stylesheet">
+</head>
+<body>
+    <div class="inputForm">
+        <div class="header">
+            <h1>Add new topic!</h1>
+            <p>Fill the forms below: </p>
+        </div>
+        <video autoplay loop id="guy">
+            <source src="~/Images/Knight - 31210.mp4" />
+        </video>
+
+        <div class="inputId">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div>
+                    <label asp-for="Title" class="control-label"></label>
+                </div>
+                <input asp-for="Title" class="form-control" />
+                <label asp-validation-for="Title"></label>
+
+                <div>
+                    <label asp-for="Description"></label>
+                </div>
+                <input asp-for="Description" />
+                <label asp-validation-for="Description"></label>
+
+                <div>
+                    <label asp-for="TimeToMaster"></label>
+                </div>
+                <input asp-for="TimeToMaster" class="form-control" />
+                <label asp-validation-for="TimeToMaster"></label>
+
+
+                <div>
+                    <label asp-for="TimeSpend" class="control-label"></label>
+                </div>
+                <input asp-for="TimeSpend" class="form-control" />
+                <label asp-validation-for="TimeSpend"></label>
+
+
+                <div>
+                    <label asp-for="Source"></label>
+                </div>
+                <input asp-for="Source" class="form-control" />
+                <span asp-validation-for="Source"></span>
+
+                <div>
+                    <label asp-for="StartLearningDate" class="control-label"></label>
+                </div>
+                <input asp-for="StartLearningDate" class="form-control" />
+                <span asp-validation-for="StartLearningDate" class="text-danger"></span>
+
+                <div>
+                    <label asp-for="CompletionDate" class="control-label"></label>
+                </div>
+                <input asp-for="CompletionDate" class="form-control" />
+                <span asp-validation-for="CompletionDate" class="text-danger"></span>
+
+                <div>
+                    <label asp-for="InProgress" class="control-label"></label>
+                </div>            
+                    <input asp-for="InProgress" class="form-control" />
+                    <span asp-validation-for="InProgress" class="text-danger"></span>
+                
+                
+                    <input type="submit" value="Create" class="submit" />
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="back">
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+

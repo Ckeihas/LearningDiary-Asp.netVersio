@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Get Started";
+}
+
+<!DOCTYPE html>
+<head>
+    <title>Get Started</title>
+    <link href="~/css/getStarted.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="inputForm">
+        <div class="header">
+            <h1>Add new topic!</h1>
+            <p>Fill the forms below: </p>
+        </div>
+        <video autoplay loop id="guy">
+            <source src="~/Images/Knight - 31210.mp4" />
+        </video>
+        <div class="inputId">
+            <form>
+                <div>
+                    <label for="idNum">ID: </label>
+                </div>
+                <input type="text" id="idNum" name="idNum">
+
+                <div>
+                    <label for="title">Title: </label>
+                </div>
+                <input type="text" id="title" name="title">
+
+                <div>
+                    <label for="description">Description: </label>
+                </div>
+                <input type="text" id="description" name="description">
+
+                <div>
+                    <label for="timeToMaster">Time to master: </label>
+                </div>
+                <input type="text" id="timeToMaster" name="timeToMaster">
+
+                <div>
+                    <label for="timeSpend">Time spend: </label>
+                </div>
+                <input type="text" id="timeSpend" name="timeSpend">
+
+                <div>
+                    <label for="source">Source: </label>
+                </div>
+                <input type="text" id="source" name="source">
+
+                <div>
+                    <label for="startLearning">Start learning date: </label>
+                </div>
+                <input type="text" id="startLearning" name="startLearning">
+
+                <div>
+                    <label for="completion">Completion date: </label>
+                </div>
+                <input type="text" id="completion" name="completion">
+
+                <div>
+                    <label for="completion">InProgress: </label>
+                </div>
+                <input type="checkbox" id="completion" name="completion">
+
+                <input class="submit" type="submit" />
+            </form>
+        </div>
+    </div>
+</body>
